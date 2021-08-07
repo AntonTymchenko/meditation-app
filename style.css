@@ -24,12 +24,13 @@
   position: relative;
 }
 .player-container svg {
+  /* two circles and play button stay ont the middle  */
   position: absolute;
   height: 50%;
   top: 50%;
   left: 50%;
   /* for layout svg on center */
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-90deg);
   /* for click on the play button */
   pointer-events: none;
 }
@@ -48,4 +49,39 @@ video {
   width: 100%;
   /* for visibility svg imgs  */
   z-index: -10;
+}
+
+.time-select button,
+.sound-picker button {
+  color: #ffffff;
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.time-select button:hover {
+  color: black;
+  background: #ffffff;
+}
+
+.sound-picker button {
+  border: none;
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  padding: 30px;
+}
+.sound-picker button:nth-child(1) {
+  background: #4972a1;
+}
+.sound-picker button:nth-child(2) {
+  background: #a14f49;
+}
+/* for centering svg imgs in circles */
+.sound-picker button img {
+  height: 100%;
 }
