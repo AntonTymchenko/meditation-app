@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.time-select,
+.sound-picker,
+.player-container {
+  height: 80%;
+  flex: 1; /* for the same length for time-select, payer-cont &  soundpicker*/
+  display: flex;
+  flex-direction: column;
+  /* all items have  equal space around*/
+  justify-content: space-evenly;
+  align-items: center;
+}
+.player-container {
+  position: relative;
+}
+.player-container svg {
+  position: absolute;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  /* for layout svg on center */
+  transform: translate(-50%, -50%);
+  /* for click on the play button */
+  pointer-events: none;
+}
+
+/* changes for time display after that button play goes to the center */
+.time-display {
+  position: absolute;
+  bottom: 10%;
+  color: #fff;
+  font-size: 50px;
+}
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  /* for visibility svg imgs  */
+  z-index: -10;
+}
